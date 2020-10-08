@@ -1,0 +1,27 @@
+{
+  "name": "honey",
+  "version": "1.0.0",
+  "description": "A user bot for the Hiven chat platform",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rash/honey.git"
+  },
+  "keywords": [
+    "hiven",
+    "user bot"
+  ],
+  "author": "Mason Khonsari",
+  "license": "0BSD",
+  "bugs": {
+    "url": "https://github.com/rash/honey/issues"
+  },
+  "homepage": "https://github.com/rash/honey#readme",
+  "dependencies": {
+    "@types/node": "^14.11.2",
+    "hiven": "^2.0.8"
+  }
+}
