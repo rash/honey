@@ -39,4 +39,4 @@ To run a command, simply type `honey!` and the name of the command, along with a
 
 ## Licensing
 
-Shuttle is licensed under the Zero Clause BSD license. A copy of this license can be found in the LICENSE file.
+Honey is licensed under the Zero Clause BSD license. A copy of this license can be found in the LICENSE file.
