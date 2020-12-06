@@ -11,7 +11,7 @@ export class InfoCommand extends Command {
         super("Info", "Provides information about a provided user.", false, 1)
     }
 
-    public execute(message: MessageCollection, honey: Honey, parameters: string[]) {
+    execute(message: MessageCollection, honey: Honey, parameters: string[]) {
         message.destroy().then(() => {
             const username = parameters[0]
             honey.client.rest.get(`/users/${username}`).then(response => {

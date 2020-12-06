@@ -9,7 +9,7 @@ export class CleanCommand extends Command {
         super("Clean", "Searches up to 50 messages and removes ones belonging to you", true, 1)
     }
 
-    public execute(message: Message, honey: Honey, parameters: string[]) {
+    execute(message: Message, honey: Honey, parameters: string[]) {
         message.destroy().then(() => {
             var searchLimit = 50
             if (parameters.length == 1) {

@@ -8,7 +8,7 @@ export class HelpCommand extends Command {
         super("Help", "Shows a list of available commands along with a description of what each one does", false, 0)
     }
     
-    public execute(message: Message, honey: Honey) {
+    execute(message: Message, honey: Honey) {
         var commandRespose = "**__Name - Description__** \n"
         for (const command of honey.commands) {
             commandRespose += `${command.name} - ${command.description}`

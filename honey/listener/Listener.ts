@@ -1,11 +1,8 @@
 import { Honey } from "../Honey";
 
 export abstract class Listener {
-    protected honey: Honey
 
-    constructor(honey: Honey) {
-        this.honey = honey;
-    }
+    constructor(protected honey: Honey) {}
 
-    public abstract startListening(): void
+    abstract startListening(): void
 }

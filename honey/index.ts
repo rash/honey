@@ -1,5 +1,5 @@
 import { Client } from "hiven";
-import { Honey } from "./honey/Honey"
+import { Honey } from "./Honey"
 import { readFileSync } from "fs";
 
 const client = new Client({ type: "user" })

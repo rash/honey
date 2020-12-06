@@ -4,7 +4,7 @@ export class ConnectionListener extends Listener {
 
     private isInititalConnection: boolean = true
 
-    public startListening() {
+    startListening() {
         this.honey.client.on('init', () => {
             const properWord = this.isInititalConnection ? "Connected" : "Reconnected"
             if (this.isInititalConnection) {

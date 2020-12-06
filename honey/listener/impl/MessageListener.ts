@@ -6,7 +6,7 @@ const PREFIX = "honey!"
 
 export class MessageListener extends Listener {
 
-    public startListening(): void {
+    startListening() {
         this.honey.client.on("message", (message: Message) => {
             if (message.author.username == this.honey.client.user.username && message.content.startsWith(PREFIX)) {
                 const command = this.findCommand(message)
@@ -25,7 +25,7 @@ export class MessageListener extends Listener {
         })
     }
 
-    private findCommand(message: Message): Command {
+    private findCommand(message: Message) {
         const providedCommand = message.content.split(" ")[0].replace(PREFIX, "")
         for (const command of this.honey.commands) {
             if (command.name.toUpperCase() == providedCommand.toUpperCase()) {

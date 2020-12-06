@@ -12,14 +12,11 @@ import { Listener } from "./listener/Listener";
 export class Honey {
     private hasBeenInitializedAlready: boolean
     private readonly listeners: Listener[] = [new ConnectionListener(this), new MessageListener(this)]
-    public readonly commands: Command[] = [new HelpCommand(), new CleanCommand(), new InfoCommand]
-    public readonly client: Client
+    readonly commands: Command[] = [new HelpCommand(), new CleanCommand(), new InfoCommand]
 
-    constructor(client: Client) {
-        this.client = client
-    }
+    constructor(readonly client: Client) {}
 
-    public init(token: string) {
+    init(token: string) {
         if (this.hasBeenInitializedAlready) {
             throw new HoneyError("Current instance is already initialized")
         }
